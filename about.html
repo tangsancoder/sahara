@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Sahara Adventures</title>
+    <link rel="stylesheet" href="riya.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="container"> <div class="navbar">
+            <img src="sahara/logo-sahara.png" class="logo" alt="Logo"> <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="region.html">Regions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="explore.html">Expeditions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="sahara/menu_icon.png" class="menu-icon" alt="Menu Icon"> </div>
+
+
+
+<!---About us section-->
+<section id="about-section" class="about-section">
+    <h1>About <span>US</span></h1>
+    <br>
+    <div class="container about-grid">
+        <div class="about-image">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="sahara/Experience luxury in the desert with a romantic….jpg" style="width:100%" alt="Sahara Adventure 1">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="sahara/fr1.jpg" style="width:100%" alt="Sahara Adventure 2">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="sahara/fr2.jpg" style="width:100%" alt="Sahara Adventure 3">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="sahara/fr3.jpg" style="width:100%" alt="Sahara Adventure 3">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="sahara/fr4.jpg" style="width:100%" alt="Sahara Adventure 3">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="sahara/fr5.jpg" style="width:100%" alt="Sahara Adventure 3">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+        </div>
+        <div class="about-content">
+            <h2>Our Story: Journeys Beyond Horizons</h2>
+            <p class="intro-paragraph">Born from a deep love for the vast, golden expanse of the Sahara, our company was founded to share its unparalleled beauty and mystery with the world. We believe that an adventure here is more than just a trip; it's a transformative experience.</p>
+            <p>For years, we've meticulously crafted itineraries that go beyond the ordinary, ensuring every journey is rich with authentic cultural encounters, breathtaking landscapes, and moments of profound tranquility. Our expert guides, often local to the regions we explore, are not just navigators but storytellers, sharing the secrets of the desert's history, geology, and traditions.</p>
+            <p>We are passionately committed to sustainable tourism, working closely with local communities to ensure our expeditions leave a positive impact, preserving the natural splendor of the Sahara for generations to come.</p>
+            <button class="secondary-btn">Meet Our Team</button>
+        </div>
+    </div>
+</section>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slideschild = slides.item(i);
+      if(slideschild) {
+          slideschild.style.display = "none";
+      }
+  }
+  if (slides.item(slideIndex-1)) {
+      slides.item(slideIndex-1).style.display = "block";
+  }
+}
+</script>
+    </div>
+
+<!-----Footer section-->
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-col about-company">
+            <h3>Sahara Adventures</h3>
+            <p>Your trusted partner for unforgettable journeys into the heart of the Sahara.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+        </div>
+        <div class="footer-col quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home-section">Home</a></li>
+                <li><a href="regions.html">Regions</a></li>
+                <li><a href="#about-section">About Us</a></li>
+                <li><a href="#explore-section">Expeditions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col contact-info">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Desert Path, Oasis City, Sahara</p>
+            <p><i class="fas fa-phone"></i> +252 619 001 709</p>
+            <p><i class="fas fa-envelope"></i> info@sahara-adventures.com</p>
+        </div>
+        <div class="footer-col newsletter">
+            <h3>Newsletter</h3>
+            <p>Stay updated with our latest adventures and offers.</p>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Your Email" aria-label="Your Email for Newsletter" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Sahara Adventures. All rights reserved | ryan ashara.</p>
+    </div>
+</footer>
+</body>
+</html>
